@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+				<head>
+								<title>My Cool Mapping App</title>
+								<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+								<style>
+												body { padding: 0; margin: 0}
+												html, body, #map { height: 100%; width: 100%; }
+								</style>
+				</head>
+				<body>
+								<div id="map"></div>
+
+								<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+								<script>
+												var map = L.map('map').setView([33.805810, -116.430520], 17);
+												var popup = L.popup();
+
+function onMapClick(e) {
+		popup
+				.setLatLng(e.latlng)
+				.setContent("You clicked the map at " + e.latlng.toString())
+				.openOn(map);
+}
+
+map.on('click', onMapClick);
+												var marker = L.marker([33.805810, -116.430520]).addTo(map);
+												marker.bindPopup("<b>This is my house!</b>").openPopup();
+												L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+												attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+												maxZoom: 18
+												}).addTo(map);
+								</script>
+				</body>
+</html>

@@ -1,0 +1,53 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Lolol</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link href="http://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+</head>
+
+<style type="text/css"></style></head>
+
+<body>
+  <div id="top"></div>
+  <div id="title"><h1>Baldy's Angels</h1></div>
+  <div class="header">
+    <ul>
+      <a href=""><li>
+      JUST LOOK</li></a><a href=""><li>
+      AT THESE</li></a><a href=""><li>
+      BEAUTIFUL, MOVING</li></a><a href=""><li id="last-box">
+      DIVS MHHMMM</li></a>
+    </ul>
+  </div>
+  <div class="main">
+     <div id="map"></div>
+     <div id="line"></div>
+     <p>
+       "<span>11/10 (IGN)</span><i> would try again</i>" <br>~ Peacea17
+     </p>
+    <div id="line"></div>
+  </div>
+  <div id="Footer">
+			<p>
+          Coyright James Karpinski 2015
+			</p>
+		</div>
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js">
+    </script>
+    <script>
+    var map = L.map('map').setView([51.209347, -2.644598], 13);
+    var marker = L.marker([51.209347, -2.644598]).addTo(map);
+    </script>
+    <script>
+          L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+          maxZoom: 18
+          }).addTo(map);
+    </script>
+</body>
+</html>
